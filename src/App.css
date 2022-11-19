@@ -1,0 +1,42 @@
+:root {
+  --Dark: #222;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.bg {
+  height: 100vh;
+}
+
+/* ::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(0, 225, 255), rgb(255, 2, 141));
+  border-radius: 4px;
+} */
+.box {
+  justify-content: center;
+  display: flex;
+}
+.loader{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+.adminbg {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.quizbg {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+}
