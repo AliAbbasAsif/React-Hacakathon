@@ -89,12 +89,7 @@ function Navbar(props) {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {[
-                  { route: "/", name: "registrationForm" },
-                  { route: "/course", name: "courses" },
-                  { route: "/result", name: "results" },
-                  { route: "/trainer", name: "trainer" },
-                ].map((page, index) => (
+                {[{ route: "/home", name: "Booking" }].map((page, index) => (
                   <MenuItem key={index} onClick={() => navigate(page.route)}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
@@ -120,12 +115,7 @@ function Navbar(props) {
               LOGO
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {[
-                { route: "/", name: "registrationForm" },
-                { route: "/course", name: "courses" },
-                { route: "/result", name: "results" },
-                { route: "/trainer", name: "trainer" },
-              ].map((page, index) => (
+              {[{ route: "/home", name: "Booking" }].map((page, index) => (
                 <Button
                   key={index}
                   onClick={() => navigate(page.route)}

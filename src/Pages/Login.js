@@ -30,12 +30,12 @@ let dispatch = useDispatch()
       .then((success) => {
         console.log(success)
         if (success.category == "admin") {
-          navigate("/admin", {
+          navigate("/admin/transport", {
             state: success,
           });
           dispatch(add(success))
         } else if (success.category == "user") {
-          navigate("/home", {
+          navigate("/profile", {
             state: success,
           });
           dispatch(add(success))

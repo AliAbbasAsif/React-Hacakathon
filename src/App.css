@@ -7,7 +7,27 @@
   text-align: center;
   min-height: 100vh;
 }
+table thead tr{
+  background-color: #222;
+  color:white;
+  font-size: 14px;
+}
 
+tbody tr td{
+  font-size: 13px;
+}
+
+th,td{
+  padding: 10px 20px;
+}
+
+td{
+  border: 1px solid rgb(25, 24, 24);
+}
+
+tr:nth-child(even){
+  background-color: rgba(rgba(34, 34, 34, 0.338));
+}
 .bg {
   height: 100vh;
 }
@@ -26,7 +46,7 @@
 .loader{
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 20vh;
   display: flex;
 }
 .adminbg {

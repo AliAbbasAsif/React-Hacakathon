@@ -8,9 +8,10 @@ import {
 import Admin from '../Pages/AdminScreens/Admin';
 import Home from '../Pages/Home';
 import Login from '../Pages/Login';
-import Profile from '../Pages/NavbarScreens/Profile';
 import SignUp from '../Pages/SignUp'
 import Tester from '../Pages/Tester'
+import Verification from '../Pages/UsersScreen/Verification';
+import Profile from '../Pages/UsersScreen/Profile'
 
 
 function AppRouter() {
@@ -24,7 +25,9 @@ function AppRouter() {
                     <Route path='admin/*' element={<Admin />} />
                     <Route path='/home' element={<Home />} />
                     <Route path='/test' element={<Tester />} />
+                    <Route path='/verification' element={<Verification />} />
                     <Route path='/profile' element={<Profile />} />
+
                     {/* <Route path='/profile' element={<Profile />} />
                     <Route path='/account' element={<Account />} />
                     <Route path='/dashboard' element={<Dashboard />} /> */}

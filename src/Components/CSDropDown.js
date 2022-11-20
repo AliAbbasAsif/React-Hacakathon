@@ -1,9 +1,11 @@
+import { FormControl } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { useEffect, useState } from "react";
 import "../App.css";
 import { getData } from "../Config/firebasemethods";
+import CSSmallLoader from "./CSSmallLoader";
 
 export default function CSDropDown(props) {
   const {
@@ -17,6 +19,7 @@ export default function CSDropDown(props) {
     valueField,
     nodename,
   } = props;
+  
 
   let [datasrc, setDatasrc] = useState(datasource);
   let getDatasrc = () => {
@@ -36,9 +39,12 @@ export default function CSDropDown(props) {
   }, []);
   return (
     <>
+    <FormControl fullWidth>
+
+
       <InputLabel id="demo-simple-select-label">{label}</InputLabel>
       <Select
-        variant="standard"
+        variant="outlined"
         fullWidth={true}
         value={value}
         labelId="demo-simple-select-label"
@@ -51,14 +57,14 @@ export default function CSDropDown(props) {
         // InputLabelProps={{ className: "textFieldlabel" }}
         // inputProps={{ className: "textFieldlabel" }}
       >
-        {datasource && datasource.length > 0
-          ? datasource.map((x) => (
-              <MenuItem value={x[valueField ? valueField : "id"]}>
+        {datasrc && datasrc.length > 0
+          ? datasrc.map((x) => <MenuItem value={x[valueField ? valueField : "id"]}>
                 {x[displayField ? displayField : "displayname"]}
               </MenuItem>
-            ))
-          : null}
+            )
+          : <CSSmallLoader width='20%' height='50%' />}
       </Select>
+      </FormControl>
     </>
   );
 }

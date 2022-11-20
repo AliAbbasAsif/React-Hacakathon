@@ -20,8 +20,13 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from '@mui/icons-material/Person';
-import First from "../Pages/AdminScreens/First";
+import First from "../Pages/AdminScreens/Transport";
 import { Signout } from "../Config/firebasemethods";
+import Transport from "../Pages/AdminScreens/Transport";
+import Transporttype from "../Pages/AdminScreens/Transporttype";
+import Transportroutes from "../Pages/AdminScreens/Transportroutes";
+import AltRouteIcon from '@mui/icons-material/AltRoute';
+import DirectionsBusFilledIcon from '@mui/icons-material/DirectionsBusFilled';
 
 
 const drawerWidth = 240;
@@ -217,7 +222,7 @@ let signout=()=>{
               <ListItem
                 className="sideBtns"
                 onClick={() => {
-                  navigate("first");
+                  navigate("transport");
                 }}
                 disablePadding
                 sx={{ display: "block" }}
@@ -236,10 +241,74 @@ let signout=()=>{
                       justifyContent: "center",
                     }}
                   >
-                    <PersonIcon color="inherit" />
+                    <DirectionsBusFilledIcon color="inherit" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="First "
+                    primary="Transport"
+                    sx={{ opacity: open ? 1 : 0 }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            
+
+              <ListItem
+                className="sideBtns"
+                onClick={() => {
+                  navigate("transporttype");
+                }}
+                disablePadding
+                sx={{ display: "block" }}
+              >
+                <ListItemButton
+                  sx={{
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
+                  }}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <DirectionsBusFilledIcon color="inherit" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Transport Type "
+                    sx={{ opacity: open ? 1 : 0 }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            
+
+              <ListItem
+                className="sideBtns"
+                onClick={() => {
+                  navigate("transportroutes");
+                }}
+                disablePadding
+                sx={{ display: "block" }}
+              >
+                <ListItemButton
+                  sx={{
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
+                  }}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <AltRouteIcon color="inherit" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Routes"
                     sx={{ opacity: open ? 1 : 0 }}
                   />
                 </ListItemButton>
@@ -294,7 +363,9 @@ let signout=()=>{
         >
           
           <Routes>
-          <Route path="first" element={<First />} />
+          <Route path="transport" element={<Transport />} />
+          <Route path="transporttype" element={<Transporttype />} />
+          <Route path="transportroutes" element={<Transportroutes />} />
         
           </Routes>
         </Box>

@@ -27,7 +27,8 @@ export default function Tester() {
   };
   return (
     <div>
-        {/* <CSButton label={'Login'} color='success' variant='contained' onClick={resetpass} /> */}
+      
+        {/* <CSButton label={'Login'} color='success' variant='contained' /> */}
 {/* <CSSwitch  label={'rwhjb'} onChange={(e)=>console.log(e.target.checked)} /> */}
         {/* <CSAlert alertMessage={alertMessage} severity={severity}  /> */}
       {/* <CSCheckbox label="Are you sure?" checked={statement} onChange={checking} /> */}
